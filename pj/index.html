@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style type="text/css">
+.text{
+  margin: 0 auto;    
+  height: 230px;
+  writing-mode: vertical-rl;/*竖排文字*/
+  position: relative;
+  top:30px;
+  left: 30px;
+  font-family:myFont;
+  font-size: 22px;
+  opacity: 0;
+  -webkit-animation: backg linear ;
+  -webkit-animation-duration: 10s;
+  -webkit-animation-delay:14s;
+  -webkit-animation-fill-mode:forwards;
+}
+@font-face{
+	font-family: "myFont";
+	src:url('zt/颜体书法.ttf');
+}
+  .snow-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  top: 0;
+  overflow: hidden;
+  opacity: 1;
+  background-image:url('imgs/1.jpg');
+  background-size:100% 100%;
+ 
+  }
+   .snow-background2 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  top: 0;
+  overflow: hidden;
+ 
+  opacity: 0;
+  background-image:url('imgs/2.jpg');
+  background-size:100% 100%;
+  -webkit-animation: backg linear ;
+  -webkit-animation-duration: 10s;
+  -webkit-animation-delay:3s;
+  }
+   .snow-background3 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  top: 0;
+  overflow: hidden;
+ 
+  opacity: 0;
+  background-image:url('imgs/3.jpg');
+  background-size:100% 100%;
+  -webkit-animation: backg linear ;
+  -webkit-animation-duration: 10s;
+  -webkit-animation-delay: 6s;
+
+  }
+    .snow-background4 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  top: 0;
+  overflow: hidden;
+  opacity: 0;
+  background-image:url('imgs/4.jpg');
+  background-size:100% 100%;
+  -webkit-animation: backg linear ;
+  -webkit-animation-duration: 8s;
+  -webkit-animation-delay:10s;
+  -webkit-animation-fill-mode:forwards;
+
+  }
+  @-webkit-keyframes backg {
+ 
+  0% {
+    
+    opacity:0;
+  }
+  
+ 
+  100%{
+  	opacity: 1;
+  }
+}
+.snow {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: translate3d(0, -100%, 0);
+  -webkit-animation: snow linear infinite;
+}
+.snow.foreground {
+  background-image: url("imgs/d.png");
+  -webkit-animation-duration: 10s;
+}
+/*过渡大颗雪图片*/
+.snow.foreground.layered {
+  -webkit-animation-delay: 4.5s;
+}
+.snow.middleground {
+  background-image: url(imgs/z.png);
+  -webkit-animation-duration: 15s;
+}
+/*过渡中颗雪图片*/
+.snow.middleground.layered {
+  -webkit-animation-delay: 7.5s;
+}
+.snow.background {
+  background-image: url(imgs/x.png);
+  -webkit-animation-duration: 20s;
+}
+/*过渡小颗雪图片*/
+.snow.background.layered {
+  -webkit-animation-delay: 10s;
+}
+/*创建下雪动画，三张图片*/
+@-webkit-keyframes snow {
+  0% {
+    -webkit-transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 100%, 0);
+  }
+}
+
+</style>
+<body>
+<div class="snow-container">
+  <div class="snow foreground"></div>
+  <div class="snow foreground layered"></div>
+  <div class="snow middleground"></div>
+  <div class="snow middleground layered"></div>
+  <div class="snow background"></div>
+  <div class="snow background layered"></div>
+  <div class="snow-background2"></div>
+<div class="snow-background3"></div>
+<div class="snow-background4"></div>
+</div>
+<p class="text">
+<span>愿舍肆千清规入尘，
+护君一世长安。
+但求几坛藏酒疯魔，
+执手此生风流。</span></p>
+
+</body>
+</html>
